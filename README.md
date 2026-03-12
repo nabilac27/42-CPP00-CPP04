@@ -30,10 +30,10 @@ These modules introduce the fundamentals of **C++ programming and Object-Oriente
 
 ## 📚 Modules Overview
 
-| Module    | Topics                                         |
-| --------- | ---------------------------------------------- |
-| **CPP00** | Introduction to C++, classes, member functions |
-| **CPP01** | Memory allocation, references, pointers        |
-| **CPP02** | Canonical form, operator overloading           |
-| **CPP03** | Inheritance                                    |
-| **CPP04** | Polymorphism and abstract classes              |
+| Module                                                                  | Topics                                         |
+|-------------------------------------------------------------------------|------------------------------------------------|
+| **[CPP00](https://github.com/nabilac27/CPP00-04/tree/main/CPP00/docs)** | Introduction to C++, classes, member functions |
+| **[CPP01](https://github.com/nabilac27/CPP00-04/tree/main/CPP01)**      | Memory allocation, references, pointers        |
+| **[CPP02](https://github.com/nabilac27/CPP00-04/tree/main/CPP02)**      | Canonical form, operator overloading           |
+| **[CPP03](https://github.com/nabilac27/CPP00-04/tree/main/CPP03)**      | Inheritance                                    |
+| **[CPP04](https://github.com/nabilac27/CPP00-04/tree/main/CPP04)**      | Polymorphism and abstract classes              |
