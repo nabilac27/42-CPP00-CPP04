@@ -28,8 +28,6 @@ In this module, the focus is on understanding how C++ differs from C while learn
     └── main.cpp
 ```
 
-TO-DO: make own readme from each project in each folder cpp00-04
-
 ## ex00 — Megaphone
 
 This program takes command-line arguments and prints them in **uppercase**.  
