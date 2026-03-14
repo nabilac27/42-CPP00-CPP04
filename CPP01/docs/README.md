@@ -101,8 +101,8 @@ This exercise introduces the difference between **stack allocation** and **heap 
 `Zombie` class stores a `name`, has an `announce()` method, and prints a destruction message in the destructor.
 
 Logic
-- newZombie() allocates a zombie with new and returns a pointer, which means the zombie lives on the heap until you manually delete it.
-- randomChump() creates a local Zombie zombie(name); and calls announce();, so that zombie lives on the stack and is destroyed automatically when the function ends
+- `newZombie()` allocates a zombie with new and returns a pointer, which means the zombie lives on the heap until you manually delete it.
+- `randomChump()` creates a local Zombie zombie(name); and calls announce();, so that zombie lives on the stack and is destroyed automatically when the function ends
 
 Example Input:
 ```bash
@@ -121,7 +121,7 @@ Heap Zombie: destroyed
 ```
 
 ## ex01 — Moar Brainz!
-This exercise extends the zombie idea by creating a zombie horde with one allocation. The code allocates an array with new Zombie[N], then fills each element using setZombie(name). 
+This exercise extends the zombie idea by creating a zombie horde with one allocation. The code allocates an array with new `Zombie[N]`, then fills each element using `setZombie(name)`. 
 
 ### Concepts Used
 - Dynamic memory allocation
@@ -130,13 +130,13 @@ This exercise extends the zombie idea by creating a zombie horde with one alloca
 - Object initialization
 
 Logic
-- ´Zombie´ class in this exercise has:
+- `Zombie` class in this exercise has:
     - a default constructor
     - a named constructor
-    - announce()
-    - setZombie(std::string name) for assigning the name after array allocation 
+    - `announce()`
+    - `setZombie(std::string name)` for assigning the name after array allocation 
 
-That setter is important because when allocating new Zombie[N], C++ first default-constructs every element, then loop assigns names one by one:
+That setter is important because when allocating new `Zombie[N]`, C++ first default-constructs every element, then loop assigns names one by one:
 ```bash
 Zombie* horde = new Zombie[N];
 for (int i = 0; i < N; i++)
@@ -221,36 +221,36 @@ This exercise introduces references as class members and explores how object rel
 - Object interaction
 
 Logic
-- Weapon stores a type string and exposes:
-    - getType() returning const std::string&
-    - setType() to modify the weapon type
+- `Weapon` stores a type string and exposes:
+    - `getType()` returning `const std::string&`
+    - `setType()` to modify the weapon type
 
 Two classes are implemented:
-* HumanA → always has a weapon (reference)
-* HumanB → may or may not have a weapon (pointer)
+* `HumanA` → always has a weapon (reference)
+* `HumanB` → may or may not have a weapon (pointer)
 Both classes can attack using a Weapon object.
 This demonstrates the difference between references and pointers inside classes.
 
-HumanA stores Weapon& weapon;, so it must receive a weapon in the constructor and is always armed:
+`HumanA` stores `Weapon& weapon`;, so it must receive a weapon in the constructor and is always armed:
 ```c++
 HumanA(const std::string& name, Weapon& weaponA);
 ```
 
-HumanB stores Weapon* weapon;, initializes it to NULL, and later receives a weapon through setWeapon():
+`HumanB`stores `Weapon* weapon`;, initializes it to NULL, and later receives a weapon through `setWeapon()`:
 ```c++
 HumanB(const std::string& name) : name(name), weapon(NULL) {}
 void setWeapon(Weapon& weaponB) { this->weapon = &weaponB; }
 ```
 
 That means:
-- HumanA + reference = always has a weapon
-- HumanB + pointer = may have no weapon yet, so a setter makes sense
+- `HumanA` + reference = always has a weapon
+- `HumanB` + pointer = may have no weapon yet, so a setter makes sense
 
  attack() methods also show the syntax difference:
 
-`weapon.getType()` for the reference in HumanA
-- `weapon.getType()` for the reference in HumanA
-- `weapon->getType()` for the pointer in HumanB
+`weapon.getType()` for the reference in `HumanA`
+- `weapon.getType()` for the reference in `HumanA`
+- `weapon->getType()` for the pointer in `HumanB`
 
 
 ### Example Output
@@ -281,9 +281,9 @@ Logic
 - rejects an empty s1
 - opens the input file
 - creates filename + ".replace"
-- reads line by line with std::getline
+- reads line by line with `std::getline`
 - finds every occurrence of s1
-- replaces it by using erase() and insert() instead of std::string::replace()
+- replaces it by using `erase()` and `insert()` instead of `std::string::replace()`
 
 Replacement loop is the core logic of the exercise
 ```c++
