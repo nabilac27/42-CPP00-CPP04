@@ -107,6 +107,7 @@ Logic
 Example Input:
 ```bash
 randomChump("Stack Zombie");
+
 Zombie* zombie1 = newZombie("Heap Zombie");
 zombie1->announce();
 delete (zombie1);
@@ -116,6 +117,7 @@ Example Output:
 ```bash
 Stack Zombie: BraiiiiiiinnnzzzZ...
 Stack Zombie: destroyed
+
 Heap Zombie: BraiiiiiiinnnzzzZ...
 Heap Zombie: destroyed
 ```
@@ -139,6 +141,7 @@ Logic
 That setter is important because when allocating new `Zombie[N]`, C++ first default-constructs every element, then loop assigns names one by one:
 ```bash
 Zombie* horde = new Zombie[N];
+
 for (int i = 0; i < N; i++)
     horde[i].setZombie(name);
 ```
