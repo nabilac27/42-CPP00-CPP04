@@ -10,7 +10,23 @@ In this module, the goal is to understand how classes behave when copied, assign
 📂 Project Structure
 ```bash
 CPP02
-
+├── docs
+│   └── en.subject.pdf
+├── ex00
+│   ├── Fixed.hpp
+│   ├── Fixed.cpp
+│   ├── Makefile
+│   └── main.cpp
+├── ex01
+│   ├── Fixed.hpp
+│   ├── Fixed.cpp
+│   ├── Makefile
+│   └── main.cpp
+└── ex02
+    ├── Fixed.hpp
+    ├── Fixed.cpp
+    ├── Makefile
+    └── main.cpp
 ```
 ---
 
@@ -24,14 +40,7 @@ A Fixed class is created by implementing the four canonical functions:
 - Copy assignment operator
 - Destructor
 
-The class stores a fixed-point value internally as an integer.
-
-Files
-```bash
-include/Fixed.hpp
-src/Fixed.cpp
-main.cpp
-```
+The class stores a fixed-point value internally in an `int fixedPointNumber`, with 8 fractional bits stored as a static constant.
 
 ### Concepts Used
 - Orthodox Canonical Form
@@ -40,11 +49,45 @@ main.cpp
 - Copy assignment operator
 - Encapsulation
 
+### Files
+```bash
+include/Fixed.hpp
+src/Fixed.cpp
+main.cpp
+```
+
+### Logic
+`Fixed` class also provides:
+- `getRawBits()` to read the internal raw integer
+- `setRawBits()` to modify it manually
+
+The important part of the implementation is how copying works:
+- the copy constructor prints a message, then delegates to the assignment operator with `*this = other`;
+- the assignment operator copies the internal value using `other.getRawBits()` and protects against self-assignment with `if (this != &other)`
+
+### Example Input
+```c++
+Fixed a;
+Fixed b(a);
+Fixed c;
+c = b;
+```
+
 ### Example Output
 ```bash
 Default constructor called
 Copy constructor called
 Copy assignment operator called
+Default constructor called
+Copy assignment operator called
+getRawBits member function called
+0
+getRawBits member function called
+0
+getRawBits member function called
+0
+Destructor called
+Destructor called
 Destructor called
 ```
 
@@ -52,19 +95,12 @@ Destructor called
 
 ## ex01 — Towards a More Useful Fixed-Point Class
 
-This exercise improves the Fixed class by allowing conversion between:
+This exercise improves the `Fixed` class by allowing conversion between:
 - integers
 - floating-point numbers
 - fixed-point representation
 
 Two constructors are added to convert int and float values into fixed-point format.
-
-Files
-```bash
-include/Fixed.hpp
-src/Fixed.cpp
-main.cpp
-```
 
 ### Concepts Used
 - Fixed-point arithmetic
@@ -72,63 +108,71 @@ main.cpp
 - toFloat() and toInt() methods
 - Operator overloading (<<)
 
-### Example Output
-```bash
-a is 1234.43
-b is 10
-c is 42.42
-d is 10
-```
-
-## ex02 — Now We're Talking
-
-This exercise expands the Fixed class by implementing **operator overloading**.
-
-Arithmetic and comparison operators are added so that fixed-point numbers behave like normal numeric types.
-
-### Operators Implemented
-Arithmetic:
-
-- +
-
-- - 
-
-- *
-
-- /
-
-Comparison:
-
-- >
-
-- <
-
-- >=
-
-- <=
-
-- ==
-
-- !=
-
-Increment / Decrement:
-
-- ++
-
-- --
-
-### Utility functions:
-
-- min()
-
-- max()
-
-Files
+### Files
 ```bash
 include/Fixed.hpp
 src/Fixed.cpp
 main.cpp
 ```
+
+### Logic
+`Fixed`class adds:
+- `Fixed(const int intNumber)`
+- `Fixed(const float floatNumber)`
+- `toFloat()`
+- `toInt()`
+- `overloaded operator<<` for easy printing
+
+Integer constructor shifts left by the number of fractional bits
+```c++
+fixedPointNumber = intNumber << fractionalBitsNumber;
+```
+That means the integer is stored in fixed-point format.
+
+Float constructor scales the value and rounds it:
+```c++
+float scaledValue = floatNumber * (1 << fractionalBitsNumber);
+fixedPointNumber = roundf(scaledValue);
+```
+
+So a float like 42.42f is converted into a fixed-point integer representation.
+
+Then:
+- `toFloat()` divides by 1 << fractionalBitsNumber
+- `toInt()` shifts right by fractionalBitsNumber
+Overloaded << uses `toFloat()`, which is why printing a Fixed object displays the decimal value naturally.
+
+### Example Input
+```bash
+Fixed a;
+Fixed const b(10);
+Fixed const c(42.42f);
+Fixed const d(b);
+a = Fixed(1234.4321f);
+```
+
+### Example Output
+```bash
+a is 1234.43
+b is 10
+c is 42.4219
+d is 10
+
+a is 1234 as integer
+b is 10 as integer
+c is 42 as integer
+d is 10 as integer
+```
+
+## ex02 — Now We're Talking
+
+This exercise expands the `Fixed` class by adding:
+- comparison operators
+- arithmetic operators
+- increment/decrement operators
+- min() and max() utility functions
+
+Arithmetic and comparison operators are added so that fixed-point numbers behave like normal numeric types.
 
 ### Concepts Used
 - Operator overloading
@@ -136,11 +180,34 @@ main.cpp
 - Increment / decrement operators
 - Static member functions
 
+### Files
+```bash
+include/Fixed.hpp
+src/Fixed.cpp
+main.cpp
+```
+
+## Example Input
+```bash
+Fixed a;
+Fixed const b(Fixed(5.05f) * Fixed(2));
+
+std::cout << a << std::endl;
+std::cout << ++a << std::endl;
+std::cout << a << std::endl;
+std::cout << a++ << std::endl;
+std::cout << a << std::endl;
+std::cout << b << std::endl;
+std::cout << Fixed::max(a, b) << std::endl;
+```
+
 ### Example Output
 ```bash
 0
 0.00390625
-0.0078125
-0.0117188
-0.015625
+0.00390625
+0.00390625
+0
+10.1016
+10.1016
 ```
