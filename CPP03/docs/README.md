@@ -4,7 +4,9 @@
 
 CPP03 is the fourth module of the 42 C++ curriculum and introduces inheritance and class hierarchy in Object-Oriented Programming.
 
-In this module, we build a small combat system using different robot classes derived from a common base class. Each new exercise extends the functionality of the previous one and demonstrates how derived classes reuse and extend behavior from a base class.
+In this module, small combat system has been built by using different robot classes derived from a common base class. 
+
+Each new exercise extends the functionality of the previous one and demonstrates how derived classes reuse and extend behavior from a base class.
 
 The exercises focus on:
 - Inheritance
@@ -13,7 +15,6 @@ The exercises focus on:
 - Accessing parent class members
 - Diamond inheritance
 
-All exercises follow the C++98 standard and reinforce clean class design.
 
 📂 Project Structure
 ```bash
