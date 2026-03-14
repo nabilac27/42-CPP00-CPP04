@@ -11,8 +11,86 @@ Through several exercises, this module reinforces good programming practices and
 ## 📂 Project Structure
 
 ```bash
-
+CPP01
+├── Docs
+│   └── en.subject.pdf
+│
+├── ex00
+│   ├── include
+│   │   └── Zombie.hpp
+│   ├── src
+│   │   ├── Zombie.cpp
+│   │   ├── newZombie.cpp
+│   │   └── randomChump.cpp
+│   ├── Makefile
+│   └── main.cpp
+│
+├── ex01
+│   ├── include
+│   │   └── Zombie.hpp
+│   ├── src
+│   │   ├── Zombie.cpp
+│   │   └── zombieHorde.cpp
+│   ├── Makefile
+│   └── main.cpp
+│
+├── ex02
+│   ├── include
+│   │   └── Brain.hpp
+│   ├── src
+│   │   └── Brain.cpp
+│   ├── Makefile
+│   └── main.cpp
+│
+├── ex03
+│   ├── include
+│   │   ├── Weapon.hpp
+│   │   ├── HumanA.hpp
+│   │   └── HumanB.hpp
+│   ├── src
+│   │   ├── Weapon.cpp
+│   │   ├── HumanA.cpp
+│   │   └── HumanB.cpp
+│   ├── Makefile
+│   └── main.cpp
+│
+├── ex04
+│   ├── include
+│   │   └── Replace.hpp
+│   ├── src
+│   │   └── Replace.cpp
+│   ├── Makefile
+│   └── main.cpp
+│
+├── ex05
+│   ├── include
+│   │   └── Harl.hpp
+│   ├── src
+│   │   └── Harl.cpp
+│   ├── Makefile
+│   └── main.cpp
+│
+├── ex06
+│   ├── include
+│   │   └── Harl.hpp
+│   ├── src
+│   │   └── Harl.cpp
+│   ├── Makefile
+│   └── main.cpp
 ```
+
+---
+
+## Exercise Summaries
+| Exercise | Topic                  |
+| -------- | ---------------------- |
+| ex00     | Stack vs Heap          |
+| ex01     | Arrays of Objects      |
+| ex02     | Pointers vs References |
+| ex03     | Composition            |
+| ex04     | File Streams           |
+| ex05     | Function Pointers      |
+| ex06     | Switch Filtering       |
 
 ---
 
