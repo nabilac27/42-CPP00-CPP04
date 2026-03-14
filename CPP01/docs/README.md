@@ -102,7 +102,7 @@ This exercise introduces the difference between **stack allocation** and **heap 
 
 Logic
 - `newZombie()` allocates a zombie with new and returns a pointer, which means the zombie lives on the heap until you manually delete it.
-- `randomChump()` creates a local Zombie zombie(name); and calls announce();, so that zombie lives on the stack and is destroyed automatically when the function ends
+- `randomChump()` creates a local `Zombie zombie(name)`; and calls `announce()`;, so that zombie lives on the stack and is destroyed automatically when the function ends
 
 Example Input:
 ```bash
