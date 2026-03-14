@@ -10,44 +10,7 @@ In this module, the goal is to understand how classes behave when copied, assign
 📂 Project Structure
 ```bash
 CPP02
-├── Docs
-│   ├── en.subject.pdf
-│   └── README.md
-│
-├── ex00
-│   ├── include
-│   │   └── Fixed.hpp
-│   ├── src
-│   │   └── Fixed.cpp
-│   ├── Makefile
-│   └── main.cpp
-│
-├── ex01
-│   ├── include
-│   │   └── Fixed.hpp
-│   ├── src
-│   │   └── Fixed.cpp
-│   ├── Makefile
-│   └── main.cpp
-│
-├── ex02
-│   ├── include
-│   │   └── Fixed.hpp
-│   ├── src
-│   │   └── Fixed.cpp
-│   ├── Makefile
-│   └── main.cpp
-│
-├── ex03
-│   ├── include
-│   │   ├── Fixed.hpp
-│   │   └── Point.hpp
-│   ├── src
-│   │   ├── Fixed.cpp
-│   │   ├── Point.cpp
-│   │   └── bsp.cpp
-│   ├── Makefile
-│   └── main.cpp
+
 ```
 ---
 
