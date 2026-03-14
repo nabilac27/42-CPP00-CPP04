@@ -33,7 +33,7 @@ Two functions are implemented:
 - new and delete
 - Basic class design
 
-Example Output
+### Example Output
 ```bash
 Zombie Foo: BraiiiiiiinnnzzzZ...
 Zombie Bar: BraiiiiiiinnnzzzZ...
@@ -101,8 +101,8 @@ This demonstrates the difference between references and pointers inside classes.
 - Encapsulation
 - Object interaction
 
+### Example Output
 ```bash
-Example Output
 Bob attacks with their club
 Jim attacks with their club
 Jim attacks with their crued spiked club
@@ -124,12 +124,12 @@ The program:
 * Error handling
 * Working with program arguments
 
-Input Example
+### Input Example
 ```bash
 ./replace file.txt hello world
 ```
 
-Output Example
+### Output Example
 - Creates: ```file.txt.replace```
 - with all "hello" replaced by "world".
 
@@ -137,7 +137,7 @@ Output Example
 This exercise introduces function pointers and structured logging behavior.
 A Harl class is implemented that can output different complaint messages depending on a given log level.
 
-Available levels:
+### Available levels:
 - DEBUG
 - INFO
 - WARNING
@@ -172,12 +172,12 @@ Depending on the input log level, the program prints only the relevant messages 
 - Control flow
 - Reusing class behavior
 
-Example Input
+### Example Input
 ```bash
 ./harlFilter WARNING
 ```
 
-Example Output
+### Example Output
 ```bash
 [ WARNING ]
 I think I deserve some extra bacon for free.
