@@ -128,7 +128,7 @@ This exercise extends the zombie idea by creating a zombie horde with one alloca
 ### Concepts Used
 - Dynamic memory allocation
 - Arrays of objects
-- Memory management with new[] and delete[]
+- Memory management with `new[]` and `delete[]`
 - Object initialization
 
 Logic
