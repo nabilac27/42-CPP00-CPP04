@@ -13,16 +13,17 @@ The exercises focus on:
 - Constructor chaining
 - Method overriding
 - Accessing parent class members
-- Diamond inheritance
 
+
+---
 
 📂 Project Structure
 ```bash
 CPP03
 ├── docs
-│   └── en.subject.pdf
+|   └── en.subject.pdf
 ├── ex00
-│   ├── ClapTrap.hpp
+|   ├── ClapTrap.hpp
 │   ├── ClapTrap.cpp
 │   ├── Makefile
 │   └── main.cpp
@@ -34,23 +35,12 @@ CPP03
 │   ├── Makefile
 │   └── main.cpp
 ├── ex02
-│   ├── ClapTrap.hpp
-│   ├── ClapTrap.cpp
-│   ├── ScavTrap.hpp
-│   ├── ScavTrap.cpp
-│   ├── FragTrap.hpp
-│   ├── FragTrap.cpp
-│   ├── Makefile
-│   └── main.cpp
-├── ex03
-│   ├── ClapTrap.hpp
-│   ├── ClapTrap.cpp
-│   ├── ScavTrap.hpp
-│   ├── ScavTrap.cpp
-│   ├── FragTrap.hpp
-│   ├── FragTrap.cpp
-│   ├── DiamondTrap.hpp
-│   ├── DiamondTrap.cpp
-│   ├── Makefile
-│   └── main.cpp
+    ├── ClapTrap.hpp
+    ├── ClapTrap.cpp
+    ├── ScavTrap.hpp
+    ├── ScavTrap.cpp
+    ├── FragTrap.hpp
+    ├── FragTrap.cpp
+    ├── Makefile
+    └── main.cpp
 ```
