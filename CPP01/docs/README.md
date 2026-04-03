@@ -4,9 +4,9 @@
 
 **CPP01** is the second module of the 42 C++ curriculum and focuses on deeper exploration of Object-Oriented Programming (OOP) concepts in C++.
 
-In this module, the goal is to understand **memory allocation, pointers and references, and how objects behave** in different contexts.
+The goal is to understand **memory allocation, pointers and references, and how objects behave** in different contexts.
 
-Through several exercises, this module reinforces good programming practices and introduces tools that are essential for writing efficient and maintainable C++ code.
+---
 
 ## 📂 Project Structure
 
