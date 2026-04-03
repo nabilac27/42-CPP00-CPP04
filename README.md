@@ -10,21 +10,7 @@ These modules introduce the fundamentals of **C++ programming and Object-Oriente
 
 - The **CPP modules** introduce C++ and Object-Oriented Programming concepts, focusing on writing modular and maintainable code using classes, constructors, inheritance, and polymorphism.
 
-- Each module contains multiple exercises (`ex00`, `ex01`, etc.) that focus on specific C++ concepts.
-
----
-
-## 🧠 Key Concepts
-
-- Classes and Objects  
-- Encapsulation  
-- Inheritance  
-- Polymorphism  
-- Abstract Classes
-- Constructors and Destructors  
-- Operator Overloading  
-- Canonical Form  
-- Memory Management  
+- Each module contains multiple exercises (`ex00`, `ex01`, etc.) that focus on specific C++ concepts.  
 
 ---
 
