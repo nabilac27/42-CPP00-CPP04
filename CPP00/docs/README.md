@@ -4,7 +4,7 @@
 
 **CPP00** is the first module of the 42 C++ curriculum and introduces the basics of **C++ programming** and **Object-Oriented Programming (OOP)**.  
 
-In this module, the focus is on understanding how C++ differs from C while learning fundamental concepts such as **classes, objects, member functions, constructors, and destructors**. The exercises also emphasize writing structured and modular code using the **C++98 standard**. 
+The focus is on understanding how C++ differs from C while learning fundamental concepts such as **classes, objects, member functions, constructors, and destructors**.
 
 
 ## 📂 Project Structure
