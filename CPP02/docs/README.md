@@ -4,7 +4,7 @@
 
 **CPP02** is the third module of the 42 C++ curriculum and introduces important concepts related to **operator overloading, fixed-point arithmetic, and the Orthodox Canonical Form** in C++.
 
-In this module, the goal is to understand how classes behave when copied, assigned, or destroyed, and how to properly implement the canonical functions that control object lifecycle.
+The goal is to understand how classes behave when copied, assigned, or destroyed, and how to properly implement the canonical functions that control object lifecycle.
 
 
 📂 Project Structure
